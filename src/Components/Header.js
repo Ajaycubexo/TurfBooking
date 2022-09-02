@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <>
@@ -8,8 +8,7 @@ const Header = () => {
                     <div className="row">
                         <div className="col-12">
                             <nav className="main-nav">
-
-                                <a href="index.html" className="logo">
+                                <a href="" className="logo">
                                     <img src="assets/images/logo.png" alt="" />
                                 </a>
 
@@ -21,11 +20,12 @@ const Header = () => {
                                 </div>
 
                                 <ul className="nav">
-                                    <li><a href="index.html" className="active">Home</a></li>
-                                    <li><a href="browse.html">About Us</a></li>
-                                    <li><a href="details.html">Book Now</a></li>
-                                    <li><a href="streams.html">Blog</a></li>
-                                    <li><a href="profile.html">Contact <img src="assets/images/profile-header.jpg" alt="" /></a></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/about">About Us</Link></li>
+                                    <li><Link to="/bookNow">Book Now</Link></li>
+                                    <li><Link to="/blog">Blog</Link></li>
+                                    <li><Link to="/contact">Contact <img src="assets/images/profile-header.jpg" alt="" /></Link></li>
+                                    <li><Link to="/loginsignup">Loginsignup</Link></li>
                                 </ul>
                                 <a className='menu-trigger'>
                                     <span>Menu</span>

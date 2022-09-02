@@ -1,18 +1,30 @@
 import React from 'react'
-import Banner from './Components/Banner'
-import Footer from './Components/Footer'
-import GamingLibrary from './Components/GamingLibrary'
+import { BrowserRouter , Routes,Route } from 'react-router-dom'
+import Home from './Components/Home'
+import About from './Components/About'
+import BookNow from './Components/BookNow'
+import Contact from './Components/Contact'
+import Blog from './Components/Blog'
+import Loginsignup from './Components/Loginsignup'
 import Header from './Components/Header'
-import Popular from './Components/Popular'
+
 
 const App = () => {
   return (
    <>
-   <Header/>
-   <Banner/>
-   <Popular/>
-   <GamingLibrary/>
-   <Footer/>
+  
+  
+   <BrowserRouter>
+    <Header/>
+   <Routes> 
+    <Route path="/" element={<Home/>}/>
+    <Route path="/about" element={<About/>}/>
+    <Route path="/bookNow" element={<BookNow/>}/>
+    <Route path="/blog" element={<Blog/>}/>
+    <Route path="/contact" element={<Contact/>}/>
+    <Route path="/loginsignup" element={<Loginsignup/>}/>
+    </Routes>
+   </BrowserRouter>
    </>
   )
 }
